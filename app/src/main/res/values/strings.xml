@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Guess gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="gender_unknown">unknown</string>
+    <string name="label_input_name">Guess gender from the name</string>
+    <string name="hint_input_name">Type your first name</string>
+    <string name="result_gender">Your gender is %s</string>
+    <string name="result_description">The name %1$s from %2$d available data is a %3$s with a %4$d%% probability.</string>
+    <string name="result_unknown_description">Gender with the name %s is unknown</string>
+    <string name="title_history">Your prediction history</string>
+    <string name="item_history">Predict the gender of %s names.</string>
+    <string name="icon_character">Image male or female</string>
+    <string name="delete_item">Delete item</string>
+    <string name="title_menu_history">History</string>
+    <string name="alert_title">Delete all history?</string>
+    <string name="alert_message">All history will be permanently deleted and cannot be restored.</string>
+    <string name="alert_yes">Delete</string>
+    <string name="alert_no">Cancel</string>
+</resources>
