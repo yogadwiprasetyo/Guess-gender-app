@@ -11,7 +11,7 @@ interface HistoryDao {
     @Delete
     suspend fun delete(history: History)
 
-    @Query("SELECT * FROM history")
+    @Query("SELECT * FROM history ORDER BY searching_at DESC")
     fun getAllHistory(): LiveData<List<History>>
 
     @Query("DELETE FROM history")
