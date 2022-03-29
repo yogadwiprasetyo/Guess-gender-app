@@ -63,16 +63,15 @@ class GuessGenderFragment : Fragment() {
             }
         }
 
-        binding?.textField?.editText?.setOnEditorActionListener { textView, _, keyEvent ->
-            if (keyEvent.keyCode == KeyEvent.KEYCODE_ENTER) {
-                hideKeyboard()
-                val name = textView.text.toString()
-                appViewModel.setName(name)
-                textView.text = ""
-                true
-            } else {
-                false
-            }
+        binding?.ibSendName?.setOnClickListener {
+            hideKeyboard()
+
+            val editText = binding?.textField?.editText
+            val name = editText?.text.toString()
+
+            appViewModel.setName(name)
+            editText?.setText("")
+            editText?.clearFocus()
         }
     }
 
