@@ -1,12 +1,13 @@
 package com.yogaprasetyo.juaraandroid.guessgender.data
 
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.liveData
 import com.yogaprasetyo.juaraandroid.guessgender.data.local.History
 import com.yogaprasetyo.juaraandroid.guessgender.data.local.HistoryDao
 import com.yogaprasetyo.juaraandroid.guessgender.data.remote.response.ResponseGuessGender
 import com.yogaprasetyo.juaraandroid.guessgender.data.remote.retrofit.ApiService
 import com.yogaprasetyo.juaraandroid.guessgender.helper.Helper
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
 
 class AppRepository private constructor(
     private val apiService: ApiService,
@@ -21,7 +22,7 @@ class AppRepository private constructor(
      *
      * @param name
      * */
-    fun getGenderFromName(name: String): LiveData<Result<ResponseGuessGender>> = liveData {
+    fun getGenderFromName(name: String): Flow<Result<ResponseGuessGender>> = flow {
         emit(Result.Loading)
 
         try {
