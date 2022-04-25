@@ -9,7 +9,7 @@ import com.yogaprasetyo.juaraandroid.guessgender.helper.Helper
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
-class AppRepository private constructor(
+class AppRepository(
     private val apiService: ApiService,
     private val historyDao: HistoryDao
 ) {
