@@ -69,6 +69,9 @@ class GuessGenderFragment : Fragment() {
             val editText = binding?.textField?.editText
             val name = editText?.text.toString()
 
+            // Checking empty name
+            if (name.isEmpty()) { return@setOnClickListener }
+
             appViewModel.setName(name)
             editText?.setText("")
             editText?.clearFocus()
