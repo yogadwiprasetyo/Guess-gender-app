@@ -8,10 +8,10 @@ class Helper {
 
         /**
          * Get current date with format
-         * 2022, 1 Jan 01:20 a/p.m
+         * 2022, 1 Jan 12:00 a/p.m
          * */
         fun getCurrentDate(): String {
-            val pattern = "yyyy, d MMM hh:mm:ss a"
+            val pattern = "yyyy, d MMM hh:mm a"
             val dateFormat = SimpleDateFormat(pattern, Locale.getDefault())
             return dateFormat.format(Date())
         }
